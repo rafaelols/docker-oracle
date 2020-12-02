@@ -1,0 +1,11 @@
+version: '3'
+
+services: 
+  oracle-db-12-2:
+    image: oracle/database:11.2.0.2-xe
+    ports:
+      - "1521:1521"
+      - "5500:5500"
+    environment:
+      ORACLE_PWD: "oracle"
+    shm_size: '1g'

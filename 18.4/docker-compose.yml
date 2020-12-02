@@ -1,0 +1,15 @@
+version: '3'
+
+services: 
+  oracle-db-18-4:
+    image: oracle/database:18.4.0-xe
+    ports:
+      - "1521:1521"
+      - "5500:5500"
+    volumes:
+      - oracle-184-data:/opt/oracle/oradata
+    environment:
+      ORACLE_PWD: "oracle"
+
+volumes:
+    oracle-184-data:
